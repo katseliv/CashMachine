@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: PCM-001-202202011148
+      author: EkaterinaSelivanova
+      comment: Create Initial DB Structure
+      changes:
+        - sqlFile:
+            path: PCM-001-202202011148.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: PCM-001-202202021305
+      author: EkaterinaSelivanova
+      comment: Fill DB With Data
+      changes:
+        - sqlFile:
+            path: PCM-001-202202021305.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: PCM-001-202202021441
+      author: EkaterinaSelivanova
+      comment: Add New Column
+      changes:
+        - sqlFile:
+            path: PCM-001-202202021441.sql
+            relativeToChangelogFile: true

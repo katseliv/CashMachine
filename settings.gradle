@@ -1,0 +1,13 @@
+rootProject.name = 'cashmachine'
+
+include 'db'
+include 'rest'
+include 'service'
+include 'service'
+include 'web'
+include 'security'
+include 'security'
+include 'web'
+include 'security'
+include 'web'
+
