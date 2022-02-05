@@ -1,12 +1,12 @@
 package com.dataart.cashmachine.service.mapper;
 
 import com.dataart.cashmachine.db.entity.CardEntity;
-import com.dataart.cashmachine.service.model.CardDto;
+import com.dataart.cashmachine.service.model.view_dto.CardBalanceDto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface CardMapper {
+public interface CardBalanceMapper {
 
-    CardDto fromEntity(CardEntity entity);
+    CardBalanceDto fromEntity(CardEntity entity);
 
 }

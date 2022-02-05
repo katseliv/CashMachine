@@ -32,9 +32,6 @@ public class CardEntity {
     @Column(name = "attempts")
     private Integer attempts;
 
-    @OneToMany(mappedBy = "card")
-    private List<OperationsHistoryEntity> operations;
-
     public Long getId() {
         return id;
     }
@@ -81,14 +78,6 @@ public class CardEntity {
 
     public void setAttempts(Integer attempts) {
         this.attempts = attempts;
-    }
-
-    public List<OperationsHistoryEntity> getOperations() {
-        return operations;
-    }
-
-    public void setOperations(List<OperationsHistoryEntity> operations) {
-        this.operations = operations;
     }
 
 }

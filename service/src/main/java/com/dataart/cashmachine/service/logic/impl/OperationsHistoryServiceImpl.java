@@ -38,7 +38,7 @@ public class OperationsHistoryServiceImpl implements OperationsHistoryService {
     }
 
     @Override
-    public OperationsHistoryCreateDto addRecordAboutCheckingBalance(long cardId) {
+    public void addRecordAboutCheckingBalance(long cardId) {
         OperationsHistoryCreateDto operationsHistoryCreateDto = new OperationsHistoryCreateDto();
         operationsHistoryCreateDto.setOperation(operationMapper.fromEntity(operationRepository.findById(1).orElseThrow()));
         operationsHistoryCreateDto.setDatetime(Instant.now());
@@ -46,11 +46,10 @@ public class OperationsHistoryServiceImpl implements OperationsHistoryService {
 
         operationsHistoryRepository.save(operationsHistoryMapper.toEntity(operationsHistoryCreateDto));
 
-        return operationsHistoryCreateDto;
     }
 
     @Override
-    public OperationsHistoryCreateDto addRecordAboutWithdrawal(long cardId) {
+    public void addRecordAboutWithdrawal(long cardId) {
         OperationsHistoryCreateDto operationsHistoryCreateDto = new OperationsHistoryCreateDto();
         operationsHistoryCreateDto.setOperation(operationMapper.fromEntity(operationRepository.findById(2).orElseThrow()));
         operationsHistoryCreateDto.setDatetime(Instant.now());
@@ -58,7 +57,6 @@ public class OperationsHistoryServiceImpl implements OperationsHistoryService {
 
         operationsHistoryRepository.save(operationsHistoryMapper.toEntity(operationsHistoryCreateDto));
 
-        return operationsHistoryCreateDto;
     }
 
 }

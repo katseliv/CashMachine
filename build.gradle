@@ -15,6 +15,10 @@ allprojects {
 }
 
 dependencies {
-	implementation(project(':rest'))
+	implementation(project(':api'))
+	implementation(project(':web'))
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.3'
+	implementation 'org.thymeleaf:thymeleaf-spring5:3.1.0.M1'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity3:3.0.4.RELEASE'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.2'
 }

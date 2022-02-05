@@ -6,7 +6,6 @@ public class OperationDto {
 
     private Integer id;
 
-    @NotBlank(message = "is-blank")
     private String name;
 
     public Integer getId() {

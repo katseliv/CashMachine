@@ -1,20 +1,14 @@
 package com.dataart.cashmachine.service.logic;
 
-import com.dataart.cashmachine.service.model.CardDto;
-import com.dataart.cashmachine.service.model.OperationsHistoryDto;
-
-import java.util.List;
+import com.dataart.cashmachine.service.model.view_dto.CardBalanceDto;
+import com.dataart.cashmachine.service.model.view_dto.CardWithdrawalDto;
 
 public interface CardService {
 
-    CardDto getCardById(long cardId);
-
-    Integer getCardBalanceById(long cardId);
-
     void blockCardById(long cardId);
 
-    List<OperationsHistoryDto> getAllCompletedOperationsById(long cardId);
+    CardBalanceDto getCardBalanceById(long cardId);
 
-    Boolean withdrawCashFromCardById(long cardId, int sum);
+    CardWithdrawalDto withdrawCashFromCardById(long cardId, int sum);
 
 }

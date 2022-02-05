@@ -6,13 +6,10 @@ public class UserDto {
 
     private Integer id;
 
-    @JsonProperty("first_name")
     private String firstName;
 
-    @JsonProperty("mid_name")
     private String midName;
 
-    @JsonProperty("last_name")
     private String lastName;
 
     public Integer getId() {

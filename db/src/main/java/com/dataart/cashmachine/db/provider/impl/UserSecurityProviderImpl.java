@@ -1,18 +1,18 @@
 package com.dataart.cashmachine.db.provider.impl;
 
 import com.dataart.cashmachine.db.entity.CardEntity;
-import com.dataart.cashmachine.db.provider.CardSecurityProvider;
+import com.dataart.cashmachine.db.provider.UserSecurityProvider;
 import com.dataart.cashmachine.db.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-class CardSecurityProviderImpl implements CardSecurityProvider {
+class UserSecurityProviderImpl implements UserSecurityProvider {
 
     private final CardRepository repository;
 
     @Autowired
-    public CardSecurityProviderImpl(CardRepository repository) {
+    public UserSecurityProviderImpl(CardRepository repository) {
         this.repository = repository;
     }
 

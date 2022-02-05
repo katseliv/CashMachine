@@ -10,14 +10,11 @@ public class CardDto {
 
     private Integer balance;
 
-    @JsonProperty("is_blocked")
     private Boolean isBlocked;
 
     private UserDto owner;
 
     private Integer attempts;
-
-    private List<OperationsHistoryDto> operations;
 
     public Long getId() {
         return id;
@@ -57,14 +54,6 @@ public class CardDto {
 
     public void setAttempts(Integer attempts) {
         this.attempts = attempts;
-    }
-
-    public List<OperationsHistoryDto> getOperations() {
-        return operations;
-    }
-
-    public void setOperations(List<OperationsHistoryDto> operations) {
-        this.operations = operations;
     }
 
 }
